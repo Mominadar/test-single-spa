@@ -27,6 +27,14 @@ registerApplication({
   activeWhen: ["/app2"],
 });
 
+registerApplication({
+  name: "@test-org/dash",
+  app: () =>
+    System.import(
+      "@test-org/dash"
+    ),
+  activeWhen: (location) =>location.pathname == "/",
+});
 
 // registerApplication({
 //   name: "@test-org/navbar",
